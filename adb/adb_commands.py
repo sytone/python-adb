@@ -67,7 +67,7 @@ class AdbCommands(object):
     If serial specifies a TCP address:port, then a TCP connection is
     used instead of a USB connection.
     """
-    if serial and b':' in serial:
+    if serial and ':' in serial:
         handle = common.TcpHandle(serial)
     else:
         handle = common.UsbHandle.FindAndOpen(
